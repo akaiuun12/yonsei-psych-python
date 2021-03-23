@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "/opt/anaconda3/envs/freq/bin/python",
+    "python.pythonPath": "C:\\Users\\Red\\.conda\\envs\\yonsei\\python.exe",
     "python.formatting.provider": "black"
 }
