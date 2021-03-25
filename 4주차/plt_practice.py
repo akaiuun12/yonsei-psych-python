@@ -12,7 +12,7 @@ import seaborn as sns
 import scipy as sp
 import scipy.stats as stats
 import statsmodels.api as sm
-import stastmodels.formula.api as smf 
+import statsmodels.formula.api as smf 
 
 # LOAD DATA
 data1 = pd.read_csv('pandas_practice.csv')

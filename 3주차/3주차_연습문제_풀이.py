@@ -9,6 +9,7 @@ def summation(*arg):
 summation(1,2,3)
 
 # 특정 폴더의 파일명을 모두 불러와보자. 그 뒤 해당 폴더의 파일명을 숫자로 바꿔보자.
+import os
 
 files = os.listdir('sample')
 
