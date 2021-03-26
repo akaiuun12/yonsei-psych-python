@@ -16,10 +16,10 @@ import statsmodels.formula.api as smf
 
 # LOAD DATA
 data1 = pd.read_csv('pandas_practice.csv')
-data1['trl'] = range(len(data))
+data1['trl'] = range(len(data1))
 
 data2 = pd.read_csv('pandas_practice2.csv')
-data2['trl'] = range(len(data))
+data2['trl'] = range(len(data2))
 
 data = pd.concat([data1, data2])
 data.groupby('sn').describe()
@@ -47,4 +47,3 @@ sns.barplot(
     y='rt'
 )
 plt.show()
-

@@ -14,19 +14,21 @@ import os
 files = os.listdir('sample')
 
 for i, file in enumerate(files): 
-    print(file)
-    os.rename(f'sample/{file}', f'sample/{i}.py')
+    # print(i,file)
+    os.rename(f'sample/{file}', f'sample/{i}++.py')
 
 # random을 사용해서 특정 범위의 숫자나 특정 리스트의 요소를 뽑아보자. 복원 추출인가 아니면 비복원 추출인가? 복원 추출 혹은 비복원 추출을 지정하려면 어떻게 해야하는가?
 
 import random
 stimuli = ['a', 'b', 'c']
+stimuli
 
 # 복원 추출
 for i in range(len(stimuli)):
     print(random.choice(stimuli))
 
 # 비복원 추출
+stimuli = ['a', 'b', 'c']
 random.shuffle(stimuli)
 
 for i in range(len(stimuli)):
