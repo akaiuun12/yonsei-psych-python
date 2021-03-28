@@ -50,10 +50,7 @@ plt.ylabel('Response Time (ms)')
 plt.show()
 
 
-# BARPLOT WITH DIFFERENT COLOR PALETTE
-sns.set_style('ggplot')
-sns.set_palette('pastel')
-
+# SAVING BARPLOT WITH LIMITED Y-AXIS
 sns.barplot(
     data=data,
     x='sn',
@@ -63,6 +60,8 @@ plt.title('Barplot by Participants')
 plt.xlabel('Subject Number')
 plt.ylabel('Accuracy (%)')
 plt.ylim([0.8, 1.0])
+
+plt.savefig('data/fig3.png')
 plt.show()
 
 
@@ -75,18 +74,13 @@ sns.scatterplot(
     hue='sn',
     alpha=0.7
 )
-plt.savefig('sample_figure.png', dpi=300)
+plt.savefig('data/fig4.png', dpi=300)
 plt.show()
-
 
 
 # STATISTICAL ANALYSIS LIBRARIES
 import scipy as sp
 import scipy.stats as stats
-
-import statsmodels.api as sm
-import statsmodels.formula.api as smf
-
 
 # USING SCIPY
 data1 = data[data['sn']==1]
@@ -97,6 +91,10 @@ result2 = stats.ttest_ind(data1['rt'], data2['rt'].dropna())
 
 print(result1)
 print(result2)
+
+
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
 
 # USING STATSMODELS
 model = smf.ols(
